@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
-    "@radix-ui/react-progress": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
@@ -20,6 +19,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
+    "remark-breaks": "^4.0.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
   },
