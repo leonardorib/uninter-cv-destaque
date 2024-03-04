@@ -9,7 +9,7 @@ import remarkBreaks from "remark-breaks";
 
 export default function Home() {
 	const cvText = useRef("");
-
+	const [hasText, setHasText] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const [suggestions, setSuggestions] = useState<string>("");
 	const getSuggestions = async (cvText: string) => {
@@ -33,6 +33,7 @@ export default function Home() {
 	const reset = () => {
 		cvText.current = "";
 		setSuggestions("");
+		setHasText(false);
 	};
 
 	return (
@@ -85,11 +86,12 @@ export default function Home() {
 							placeholder="Cole aqui o conteúdo do seu currículo"
 							onChange={(e) => {
 								cvText.current = e.target.value;
+								setHasText(!!e.target.value);
 							}}
 						/>
 
 						<Button
-							disabled={isLoading}
+							disabled={isLoading || !hasText}
 							type="submit"
 							className="w-full max-w-[400px]"
 						>
