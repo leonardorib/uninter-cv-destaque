@@ -95,7 +95,7 @@ export default function Home() {
 							type="submit"
 							className="w-full max-w-[400px]"
 						>
-							{isLoading ? <Progress /> : "Ver recomendações"}
+							{isLoading ? <Progress /> : "Gerar recomendações"}
 						</Button>
 					</form>
 				)}
